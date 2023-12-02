@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-def print_matrix_integer(matrix=[[]]):
-    if not matrix:
+
+def print_matrix_integer(matrix):
+    if not matrix or not any(matrix):
         print()
     else:
-        for row in range(len(matrix)):
-            for item in range(len(matrix[row])):
-                if item != len(matrix[row]) - 1:
+        for row in matrix:
+            for idx, item in enumerate(row):
+                if idx != len(row) - 1:
                     endspace = ' '
                 else:
-                    endspace = ''
-                print("{:d}".format(matrix[row][item]), end=endspace)
-            print()
-
+                    endspace = '\n'
+                print("{:d}".format(item), end=endspace)
