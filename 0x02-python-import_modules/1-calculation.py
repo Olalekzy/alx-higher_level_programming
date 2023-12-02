@@ -13,5 +13,3 @@ if __name__ == "__main__":
     """Main function to perform calculations with numbers."""
     a = 10
     b = 5
-
-    perform_calculations(a, b)
